@@ -30,7 +30,7 @@ export default function Landing() {
             <p className="text-lg font-normal md:text-xl">
               ¡Únete ahora a nuestra lista de espera!
             </p>
-            <form className="flex flex-col gap-y-6 md:flex-row md:gap-x-4">
+            <form className="flex flex-col gap-y-4 md:flex-row md:gap-x-4">
               <div className="flex items-center gap-x-2 rounded-xl border p-4 ">
                 <User
                   size={24}
@@ -40,7 +40,7 @@ export default function Landing() {
                 <input
                   type="text"
                   placeholder="Tu nombre"
-                  className="w-1/3 focus:outline-none"
+                  className="w-1/2 focus:outline-none"
                 />
               </div>
 
