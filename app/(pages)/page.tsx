@@ -30,7 +30,7 @@ export default function Landing() {
             <p className="text-lg font-normal md:text-xl">
               ¡Únete ahora a nuestra lista de espera!
             </p>
-            <div className="flex flex-col gap-y-6 md:flex-row md:gap-x-4">
+            <form className="flex flex-col gap-y-6 md:flex-row md:gap-x-4">
               <div className="flex items-center gap-x-2 rounded-xl border p-4 ">
                 <User
                   size={24}
@@ -44,7 +44,7 @@ export default function Landing() {
                 />
               </div>
 
-              <form className="flex items-center gap-x-2 rounded-xl border p-4 ">
+              <div className="flex items-center gap-x-2 rounded-xl border p-4 ">
                 <Mail
                   size={24}
                   className="text-muted-foreground"
@@ -55,13 +55,13 @@ export default function Landing() {
                   placeholder="Correo Electrónico"
                   className="focus:outline-none"
                 />
-              </form>
+              </div>
               <div>
-                <Button className="px-10 py-7 text-base text-foreground shadow-lg shadow-primary">
+                <Button type="button" className="px-10 py-7 text-base text-foreground shadow-lg shadow-primary">
                   ¡Quiero unirme!
                 </Button>
               </div>
-            </div>
+            </form>
             <div className="flex flex-wrap gap-4 py-4 ">
               <div className="flex items-center -space-x-5 ">
                 <Image
