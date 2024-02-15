@@ -6,9 +6,17 @@ import { cn } from "./client/libs/utils";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TAPY.AI | Optimización de Amazon con AI",
+  title: {
+    default: "TAPY.AI | Optimización de Amazon con AI",
+    template: `%s - TAPY.AI | Optimización de Amazon con AI`,
+  },
   description:
     "Revoluciona tu negocio en Amazon con TAPY, el asistente integral que perfecciona tus negociaciones, listings y publicidad. Simple. Eficiente. Efectivo.",
+  icons: {
+    icon: "/logos/favicon.ico",
+    shortcut: "/logos/favicon-16x16.png",
+    apple: "/logos/apple-touch-icon.png",
+  },
   keywords: [
     "Amazon",
     "Ventas",
@@ -45,7 +53,6 @@ export const metadata: Metadata = {
     "Reembolsos",
     "Gestión de reclamaciones",
   ],
-  generator: "Next.js",
 };
 
 export default function RootLayout({
