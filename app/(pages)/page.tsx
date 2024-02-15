@@ -1,40 +1,44 @@
+import Image from "next/image";
 import { Mail, ChevronRight, User2 as User } from "lucide-react";
 import { Hero } from "../components/ui/icons";
 import { Button } from "../client/components/ui/button";
-import Image from "next/image";
+import { LandingHeader } from "../client/components/LandingHeader";
+import Footer from "../client/components/footer";
 
 export default function Landing() {
   return (
-    <section className="relative flex items-center">
-      <div className="space-y-6 text-center md:text-start">
+    <div className="container flex min-h-screen flex-col">
+      <LandingHeader />
+      <main className="relative flex flex-1 flex-col gap-6  ">
         <div className="mx-auto flex w-fit items-center gap-2 rounded-xl border px-3 py-2 text-xs md:m-0 md:text-sm">
-          Crea <ChevronRight size={17} aria-hidden />
-          Negocia <ChevronRight size={17} aria-hidden />
-          Optimiza <ChevronRight size={17} aria-hidden />
+          Crea <ChevronRight size={17} aria-hidden="true" />
+          Negocia <ChevronRight size={17} aria-hidden="true" />
+          Optimiza <ChevronRight size={17} aria-hidden="true" />
           <span className="rounded-md border border-primary bg-primary/50 px-2 py-1">
             Por tí
           </span>
         </div>
 
-        <main className="flex flex-col gap-y-14 md:items-start md:gap-y-24">
-          <hgroup className="space-y-4 text-balance">
+        <section className="flex flex-col gap-14 text-center md:gap-24 md:text-left">
+          <hgroup className="text-balance">
             <h1 className="text-4xl font-extrabold md:text-6xl md:leading-tight">
               El asistente perfecto para Amazon Sellers impulsado por IA
             </h1>
-            <h2 className="text-base font-normal md:text-xl">
+            <h2 className="py-2 text-base font-normal md:text-xl">
               Tapy.AI ha sido desarrollado por Amazon Sellers para Amazon
               Sellers.
             </h2>
           </hgroup>
-          <div className="flex flex-col gap-y-4 md:gap-x-4 md:gap-y-8">
+
+          <div className="flex flex-col gap-4 md:gap-6">
             <p className="text-lg font-normal md:text-xl">
               ¡Únete ahora a nuestra lista de espera!
             </p>
-            <form className="flex flex-col gap-y-4 md:flex-row md:gap-x-4">
-              <div className="flex items-center gap-x-2 rounded-xl border p-4 ">
+
+            <form className="flex flex-col gap-4 md:flex-row">
+              <div className="flex items-center gap-2 rounded-xl border p-4 ">
                 <User
-                  size={24}
-                  className="text-muted-foreground"
+                  className="size-6 text-muted-foreground"
                   aria-hidden="true"
                 />
                 <input
@@ -44,10 +48,9 @@ export default function Landing() {
                 />
               </div>
 
-              <div className="flex items-center gap-x-2 rounded-xl border p-4 ">
+              <div className="flex items-center gap-2 rounded-xl border p-4 ">
                 <Mail
-                  size={24}
-                  className="text-muted-foreground"
+                  className="size-6 text-muted-foreground"
                   aria-hidden="true"
                 />
                 <input
@@ -57,54 +60,37 @@ export default function Landing() {
                 />
               </div>
               <div>
-                <Button type="button" className="px-10 py-7 text-base text-foreground shadow-lg shadow-primary">
+                <Button
+                  type="button"  // ! Change to submit
+                  className="px-10 py-7 text-base text-foreground shadow-lg shadow-primary"
+                >
                   ¡Quiero unirme!
                 </Button>
               </div>
             </form>
-            <div className="flex flex-wrap gap-4 py-4">
-              <div className="flex items-center -space-x-5 ">
+            <div className=" flex items-center gap-4 py-4">
+              <div className="w-20">
                 <Image
-                  width={40}
-                  height={40}
-                  src="/images/Avatar-1.webp"
+                  width={80}
+                  height={80}
+                  src="/images/Avatars.webp"
                   alt="avatar"
-                  className="size-10 rounded-full border"
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/Avatar-4.webp"
-                  alt="avatar"
-                  className=" size-10 rounded-full border"
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/Avatar-3.webp"
-                  alt="avatar"
-                  className=" size-10 rounded-full border"
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/Avatar-2.webp"
-                  alt="avatar"
-                  className="  size-10 rounded-full border"
+                  className="object-cover"
                 />
               </div>
-              <p className=" max-w-sm text-left text-sm font-normal md:text-lg  ">
+              <p className=" max-w-sm text-left text-xs font-normal sm:text-sm  ">
                 +3000 vendedores de Amazon están esperando el lanzamiento de
                 Tapy.AI
               </p>
             </div>
           </div>
-        </main>
-      </div>
+        </section>
 
-      <div className="z-10 hidden xl:block">
-        <Hero className="absolute bottom-24 right-0 top-0" />
-      </div>
-    </section>
+        <div className="z-10 hidden xl:block">
+          <Hero className="absolute inset-y-0 right-0" />
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
