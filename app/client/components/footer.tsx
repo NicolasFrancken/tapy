@@ -1,7 +1,7 @@
 import { Button } from "@/app/client/components/ui/button";
 import { Instagram } from "lucide-react";
 import Link from "next/link";
-import { Tiktok } from "../icons";
+import { Tiktok } from "../../components/ui/icons";
 
 function Footer() {
   return (
