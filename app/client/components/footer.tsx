@@ -3,9 +3,9 @@ import { Instagram } from "lucide-react";
 import Link from "next/link";
 import { Tiktok } from "../../components/ui/icons";
 
-function Footer() {
+export const Footer = () => {
   return (
-    <footer className="container flex items-center justify-between border-t py-8">
+    <footer className="flex items-center justify-between border-t py-8">
       <div className="absolute inset-x-0 bottom-0 h-16 w-full bg-primary  blur-[120px]" />
       <p>@Copyrigth {new Date().getFullYear()}</p>
       <div className="flex gap-4">
@@ -36,5 +36,4 @@ function Footer() {
       </div>
     </footer>
   );
-}
-export default Footer;
+};
