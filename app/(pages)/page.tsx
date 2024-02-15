@@ -3,14 +3,14 @@ import { Mail, ChevronRight, User2 as User } from "lucide-react";
 import { Hero } from "../components/ui/icons";
 import { Button } from "../client/components/ui/button";
 import { LandingHeader } from "../client/components/LandingHeader";
-import Footer from "../client/components/footer";
+import { Footer } from "../client/components/footer";
 
 export default function Landing() {
   return (
-    <div className=" flex min-h-screen flex-col px-4 md:px-8 lg:px-20 xl:px-24 2xl:px-40 ">
+    <div className="flex min-h-screen flex-col px-4 md:px-8 lg:px-20 xl:px-24 2xl:px-40 ">
       <LandingHeader />
       <main className="relative flex flex-1 flex-col gap-8">
-        <div className="mx-auto flex w-fit items-center gap-2 rounded-xl border px-4 py-2 text-xs md:m-0 md:text-sm">
+        <div className=" flex w-max items-center justify-center gap-2 rounded-xl border px-4 py-2 text-xs md:justify-start md:text-sm">
           Crea <ChevronRight size={17} aria-hidden="true" />
           Negocia <ChevronRight size={17} aria-hidden="true" />
           Optimiza <ChevronRight size={17} aria-hidden="true" />
@@ -19,7 +19,7 @@ export default function Landing() {
           </span>
         </div>
 
-        <section className="flex flex-col gap-14 text-center md:gap-24 md:text-left">
+        <section className="flex flex-col gap-12 text-center md:gap-24 md:text-left">
           <hgroup className="flex flex-col text-balance">
             <h1 className="text-4xl font-extrabold md:text-6xl md:leading-tight">
               El asistente perfecto para Amazon Sellers impulsado por IA
@@ -61,7 +61,7 @@ export default function Landing() {
               </div>
               <div>
                 <Button
-                  type="button"  // ! Change to submit
+                  type="button" // ! Change to submit
                   className="px-12 py-8 text-base text-foreground shadow-lg shadow-primary"
                 >
                   ¡Quiero unirme!
