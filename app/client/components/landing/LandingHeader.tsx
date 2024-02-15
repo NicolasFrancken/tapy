@@ -1,4 +1,4 @@
-import { Logo } from "../../../components/ui/icons";
+import { Logo } from "./icons";
 
 export const LandingHeader = () => {
   return (
