@@ -4,6 +4,5 @@
   "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "all",
-  "jsxSingleQuote": false,
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "jsxSingleQuote": false
 }
