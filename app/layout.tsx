@@ -6,7 +6,7 @@ import { cn } from "./client/libs/utils";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TAPY.AI - Optimización de Amazon con AI",
+  title: "TAPY.AI | Optimización de Amazon con AI",
   description:
     "Revoluciona tu negocio en Amazon con TAPY, el asistente integral que perfecciona tus negociaciones, listings y publicidad. Simple. Eficiente. Efectivo.",
   keywords: [
@@ -59,3 +59,4 @@ export default function RootLayout({
     </html>
   );
 }
+
