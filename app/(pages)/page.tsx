@@ -44,7 +44,7 @@ export default function Landing() {
                 <input
                   type="text"
                   placeholder="Tu nombre"
-                  className="w-1/2 focus:outline-none"
+                  className="w-1/2 bg-transparent focus:outline-none"
                 />
               </div>
 
@@ -56,7 +56,7 @@ export default function Landing() {
                 <input
                   type="email"
                   placeholder="Correo Electrónico"
-                  className="focus:outline-none"
+                  className="bg-transparent focus:outline-none"
                 />
               </div>
               <div>
