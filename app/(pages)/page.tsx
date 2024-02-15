@@ -9,8 +9,8 @@ export default function Landing() {
   return (
     <div className="container flex min-h-screen flex-col">
       <LandingHeader />
-      <main className="relative flex flex-1 flex-col gap-6  ">
-        <div className="mx-auto flex w-fit items-center gap-2 rounded-xl border px-3 py-2 text-xs md:m-0 md:text-sm">
+      <main className="relative flex flex-1 flex-col gap-8">
+        <div className="mx-auto flex w-fit items-center gap-2 rounded-xl border px-4 py-2 text-xs md:m-0 md:text-sm">
           Crea <ChevronRight size={17} aria-hidden="true" />
           Negocia <ChevronRight size={17} aria-hidden="true" />
           Optimiza <ChevronRight size={17} aria-hidden="true" />
@@ -78,7 +78,7 @@ export default function Landing() {
                   className="object-cover"
                 />
               </div>
-              <p className=" max-w-sm text-left text-xs font-normal sm:text-sm  ">
+              <p className=" max-w-sm text-left text-xs font-normal sm:text-sm ">
                 +3000 vendedores de Amazon están esperando el lanzamiento de
                 Tapy.AI
               </p>
