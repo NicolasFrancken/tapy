@@ -7,7 +7,7 @@ import Footer from "../client/components/footer";
 
 export default function Landing() {
   return (
-    <div className="container flex min-h-screen flex-col">
+    <div className=" flex min-h-screen flex-col px-4 md:px-8 lg:px-20 xl:px-24 2xl:px-40 ">
       <LandingHeader />
       <main className="relative flex flex-1 flex-col gap-8">
         <div className="mx-auto flex w-fit items-center gap-2 rounded-xl border px-4 py-2 text-xs md:m-0 md:text-sm">
