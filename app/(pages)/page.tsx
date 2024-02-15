@@ -28,7 +28,7 @@ export default function Landing() {
         </div>
 
         <section className="flex flex-col gap-12 text-center md:gap-24 md:text-left">
-          <hgroup className="flex flex-col text-balance">
+          <hgroup className="flex flex-col text-balance md:max-w-6xl gap-4">
             <h1 className="text-4xl font-extrabold lg:text-5xl xl:text-6xl md:leading-tight">
               El asistente perfecto para Amazon Sellers impulsado por IA
             </h1>
@@ -70,7 +70,7 @@ export default function Landing() {
               <div>
                 <Button
                   type="button" // ! Change to submit
-                  className="px-12 py-8 text-base text-foreground shadow-lg shadow-primary"
+                  className="px-8 py-8 lg:px-12 text-base text-foreground shadow-lg shadow-primary"
                 >
                   ¡Quiero unirme!
                 </Button>
@@ -98,4 +98,3 @@ export default function Landing() {
     </div>
   );
 }
-
