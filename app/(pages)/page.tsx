@@ -28,11 +28,12 @@ export default function Landing() {
         </div>
 
         <section className="flex flex-col gap-12 text-center md:gap-24 md:text-left">
-          <hgroup className="flex flex-col text-balance md:max-w-6xl gap-4">
-            <h1 className="text-4xl font-extrabold lg:text-5xl xl:text-6xl md:leading-tight">
-              El asistente perfecto para Amazon Sellers impulsado por IA
+          <hgroup className="flex flex-col text-balance md:max-w-6xl gap-1">
+            <h1 className="text-4xl font-extrabold lg:text-5xl xl:text-6xl">
+              El asistente perfecto para <br />
+              Amazon Sellers impulsado por IA
             </h1>
-            <h2 className="py-2 text-base font-normal md:text-xl">
+            <h2 className="py-2 text-lg font-normal md:text-xl">
               Tapy.AI ha sido desarrollado por Amazon Sellers para Amazon
               Sellers.
             </h2>
@@ -70,7 +71,7 @@ export default function Landing() {
               <div>
                 <Button
                   type="button" // ! Change to submit
-                  className="px-8 py-8 lg:px-12 text-base text-foreground shadow-lg shadow-primary"
+                  className="h-[64px] px-12 text-base text-foreground shadow-lg shadow-primary"
                 >
                   ¡Quiero unirme!
                 </Button>
@@ -98,3 +99,4 @@ export default function Landing() {
     </div>
   );
 }
+
