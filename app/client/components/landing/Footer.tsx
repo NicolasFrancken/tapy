@@ -8,7 +8,9 @@ export const Footer = () => {
   return (
     <footer className="flex items-center justify-between border-t py-8">
       <div className="absolute inset-x-0 bottom-0 -z-50 h-16 w-full bg-primary blur-[120px]" />
-      <p>@Copyrigth {new Date().getFullYear()}</p>
+      <p className=" text-xs md:text-base">
+        @Copyrigth {new Date().getFullYear()}
+      </p>
       <div className="flex gap-4">
         <Link
           href="https://instagram.com/tapy.ai"
@@ -29,4 +31,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
