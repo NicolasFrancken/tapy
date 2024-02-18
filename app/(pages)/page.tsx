@@ -7,9 +7,17 @@ import { Footer } from "../client/components/landing/Footer";
 
 export default function Landing() {
   return (
-    <div className="flex min-h-screen flex-col px-4 md:px-8 lg:px-20 xl:px-24 2xl:px-40 ">
+    <div className="flex min-h-screen flex-col px-4 pt-4 xl:px-16 2xl:px-40 ">
       <LandingHeader />
-      <main className="relative flex flex-1 flex-col gap-8">
+      <main className="relative flex flex-1 flex-col items-center md:items-start gap-8">
+        <Image
+          src={"/images/landing/hero.svg"}
+          alt="hero"
+          width={0}
+          height={0}
+          className="absolute top-0 right-0 hidden lg:inline-block w-[250px] 2xl:w-[369px] h-[auto]"
+        />
+
         <div className=" flex w-max items-center justify-center gap-2 rounded-xl border px-4 py-2 text-xs md:justify-start md:text-sm">
           Crea <ChevronRight size={17} aria-hidden="true" />
           Negocia <ChevronRight size={17} aria-hidden="true" />
@@ -20,23 +28,24 @@ export default function Landing() {
         </div>
 
         <section className="flex flex-col gap-12 text-center md:gap-24 md:text-left">
-          <hgroup className="flex flex-col text-balance">
-            <h1 className="text-4xl font-extrabold md:text-6xl md:leading-tight">
-              El asistente perfecto para Amazon Sellers impulsado por IA
+          <hgroup className="flex flex-col text-balance md:max-w-6xl gap-1">
+            <h1 className="text-4xl font-extrabold lg:text-5xl xl:text-6xl">
+              El asistente perfecto para <br />
+              Amazon Sellers impulsado por IA
             </h1>
-            <h2 className="py-2 text-base font-normal md:text-xl">
+            <h2 className="py-2 text-lg font-normal md:text-xl">
               Tapy.AI ha sido desarrollado por Amazon Sellers para Amazon
               Sellers.
             </h2>
           </hgroup>
 
-          <div className="flex flex-col gap-4 md:gap-8">
-            <p className="text-lg font-normal md:text-xl">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <p className="font-normal text-base md:text-lg">
               ¡Únete ahora a nuestra lista de espera!
             </p>
 
-            <form className="flex flex-col gap-4 md:flex-row">
-              <div className="flex items-center gap-2 rounded-xl border p-4 ">
+            <form className="max-w-[500px] w-full flex flex-col gap-4 md:flex-row ">
+              <div className="h-[64px] flex items-center gap-2 rounded-xl border p-4 ">
                 <User
                   className="size-6 text-muted-foreground"
                   aria-hidden="true"
@@ -44,11 +53,11 @@ export default function Landing() {
                 <input
                   type="text"
                   placeholder="Tu nombre"
-                  className="w-1/2 bg-transparent focus:outline-none"
+                  className="w-1/2 focus:outline-none"
                 />
               </div>
 
-              <div className="flex items-center gap-2 rounded-xl border p-4 ">
+              <div className="h-[64px] flex items-center gap-2 rounded-xl border p-4 ">
                 <Mail
                   className="size-6 text-muted-foreground"
                   aria-hidden="true"
@@ -56,13 +65,13 @@ export default function Landing() {
                 <input
                   type="email"
                   placeholder="Correo Electrónico"
-                  className="bg-transparent focus:outline-none"
+                  className="focus:outline-none"
                 />
               </div>
               <div>
                 <Button
                   type="button" // ! Change to submit
-                  className="px-12 py-8 text-base text-foreground shadow-lg shadow-primary"
+                  className="h-[64px] px-12 text-base text-foreground shadow-lg shadow-primary"
                 >
                   ¡Quiero unirme!
                 </Button>
@@ -73,24 +82,21 @@ export default function Landing() {
                 <Image
                   width={80}
                   height={80}
-                  src="/images/Avatars.webp"
+                  src="/images/landing/avatars.svg"
                   alt="avatar"
                   className="object-cover"
                 />
               </div>
               <p className=" max-w-sm text-left text-xs font-normal sm:text-sm ">
-                +3000 vendedores de Amazon están esperando el lanzamiento de
-                Tapy.AI
+                +3000 vendedores de Amazon están esperando el <br /> lanzamiento
+                de Tapy.AI
               </p>
             </div>
           </div>
         </section>
-
-        <div className="z-10 hidden xl:block">
-          <Hero className="absolute inset-y-0 right-0" />
-        </div>
       </main>
       <Footer />
     </div>
   );
 }
+
