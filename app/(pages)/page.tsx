@@ -1,8 +1,8 @@
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { Footer } from "../client/components/landing/Footer";
 import { Form } from "../client/components/landing/Form";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
+import { ChevronRight } from "lucide-react";
+import { Footer } from "../client/components/landing/Footer";
 
 export default function Landing() {
   return (
