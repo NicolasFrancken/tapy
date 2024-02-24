@@ -18,7 +18,7 @@ export default function Landing() {
           className="absolute top-0 right-0 hidden lg:inline-block w-[250px] 2xl:w-[369px] h-[auto]"
         />
 
-        <div className=" flex w-max items-center justify-center gap-2 rounded-xl border px-4 py-2 text-xs md:justify-start md:text-sm">
+        <div className="flex w-max items-center justify-center gap-2 rounded-xl border px-4 py-2 text-xs md:justify-start md:text-sm">
           Crea <ChevronRight size={17} aria-hidden="true" />
           Negocia <ChevronRight size={17} aria-hidden="true" />
           Optimiza <ChevronRight size={17} aria-hidden="true" />
