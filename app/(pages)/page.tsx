@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ChevronRight, Mail, User2 as User } from "lucide-react";
+import { Form } from "../client/components/landing/Form";
+import { Mail, ChevronRight, User2 as User } from "lucide-react";
 import { Button } from "../client/components/ui/button";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
 import { Footer } from "../client/components/landing/Footer";
@@ -43,39 +44,7 @@ export default function Landing() {
               ¡Únete ahora a nuestra lista de espera!
             </p>
 
-            <form className="max-w-[500px] w-full flex flex-col gap-4 md:flex-row ">
-              <div className="h-[64px] flex items-center gap-2 rounded-xl border p-4 ">
-                <User
-                  className="size-6 text-muted-foreground"
-                  aria-hidden="true"
-                />
-                <input
-                  type="text"
-                  placeholder="Tu nombre"
-                  className=" focus:outline-none bg-transparent "
-                />
-              </div>
-
-              <div className="h-[64px] flex items-center gap-2 rounded-xl border p-4 ">
-                <Mail
-                  className="size-6 text-muted-foreground"
-                  aria-hidden="true"
-                />
-                <input
-                  type="email"
-                  placeholder="Correo Electrónico"
-                  className=" focus:outline-none bg-transparent"
-                />
-              </div>
-              <div>
-                <Button
-                  type="button" // ! Change to submit
-                  className="h-[64px] px-12 text-base text-foreground shadow-lg shadow-primary"
-                >
-                  ¡Quiero unirme!
-                </Button>
-              </div>
-            </form>
+            <Form />
             <div className=" flex items-center gap-4 py-4">
               <div className="w-20">
                 <Image

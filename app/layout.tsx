@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { cn } from "./client/libs/utils";
+import { Toaster } from "./client/components/ui/sonner";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -62,8 +63,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={cn("antialiased", outfit.className)}>{children}</body>
+      <body className={cn("antialiased", outfit.className)}>
+        {children}
+        <Toaster position="top-right" />
+      </body>
     </html>
   );
 }
-
