@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/mailjet/addLeadToContactList
+Content-Type: application/json
+
+{
+    "name": "Nico",
+    "email": "franckennicolas@gmail.com"
+}
