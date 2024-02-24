@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Form } from "../client/components/landing/Form";
+import { UserForm } from "../client/components/landing/UserForm";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
 import { ChevronRight } from "lucide-react";
 import { Footer } from "../client/components/landing/Footer";
@@ -43,7 +43,7 @@ export default function Landing() {
               ¡Únete ahora a nuestra lista de espera!
             </p>
 
-            <Form />
+            <UserForm />
             <div className=" flex items-center gap-4 py-4">
               <div className="w-20">
                 <Image
@@ -66,4 +66,3 @@ export default function Landing() {
     </div>
   );
 }
-
