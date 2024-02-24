@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Form } from "../client/components/landing/Form";
+import { Mail, ChevronRight, User2 as User } from "lucide-react";
+import { Button } from "../client/components/ui/button";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
 import { ChevronRight } from "lucide-react";
 import { Footer } from "../client/components/landing/Footer";
