@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Mail, ChevronRight, User2 as User } from "lucide-react";
-import { Hero } from "../client/components/landing/icons";
 import { Button } from "../client/components/ui/button";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
 import { Footer } from "../client/components/landing/Footer";
