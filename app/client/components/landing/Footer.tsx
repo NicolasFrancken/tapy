@@ -14,7 +14,10 @@ export const Footer = () => {
       <div className="flex gap-4">
         <Link
           href="https://instagram.com/tapy.ai"
-          className={cn(buttonVariants({ size: "icon", variant: "outline" }))}
+          className={cn(
+            buttonVariants({ size: "icon", variant: "outline" }),
+            "bg-transparent",
+          )}
         >
           <Instagram color="#0A0A0A" />
           <span className="sr-only">Instagram</span>
@@ -22,7 +25,10 @@ export const Footer = () => {
 
         <Link
           href="https://www.tiktok.com/@tapy.ai"
-          className={cn(buttonVariants({ size: "icon", variant: "outline" }))}
+          className={cn(
+            buttonVariants({ size: "icon", variant: "outline" }),
+            "bg-transparent",
+          )}
         >
           <Tiktok color="#0A0A0A" />
           <span className="sr-only">Tiktok</span>
@@ -31,3 +37,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

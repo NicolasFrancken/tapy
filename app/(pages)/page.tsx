@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Form } from "../client/components/landing/Form";
-import { Mail, ChevronRight, User2 as User } from "lucide-react";
-import { Button } from "../client/components/ui/button";
+
+import { ChevronRight } from "lucide-react";
+import { UserForm } from "../client/components/landing/UserForm";
 import { LandingHeader } from "../client/components/landing/LandingHeader";
 import { Footer } from "../client/components/landing/Footer";
 
@@ -44,7 +44,7 @@ export default function Landing() {
               ¡Únete ahora a nuestra lista de espera!
             </p>
 
-            <Form />
+            <UserForm />
             <div className=" flex items-center gap-4 py-4">
               <div className="w-20">
                 <Image
@@ -67,4 +67,3 @@ export default function Landing() {
     </div>
   );
 }
-
