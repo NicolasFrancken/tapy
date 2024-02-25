@@ -29,7 +29,7 @@ export const UserForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
     try {
       toast.promise(
@@ -39,16 +39,18 @@ export const UserForm = () => {
           loading: "Enviando tu información...",
           success: () => {
             form.reset();
-
             return "Yey, ahora eres parte del mejor software del mundo 🎉";
+          },
+          error: () => {
+            form.reset();
+            return "Oh oh, ocurrió un error. Intentalo de nuevo.";
           },
         },
       );
     } catch (error) {
-      console.error(error);
       return toast.error(" Oh oh, ocurrió un error");
     }
-  }
+  };
 
   return (
     <Form {...form}>
@@ -63,9 +65,9 @@ export const UserForm = () => {
             <FormItem className="flex  flex-col space-y-0 ">
               <div
                 className={cn(
-                  "flex items-center border h-[64px] gap-2 px-2 rounded-lg",
+                  "flex items-center border h-[64px] gap-2 px-4 rounded-xl",
                   form.formState.errors.name &&
-                  "border-red-500 *:text-red-500 *:placeholder:text-red-500",
+                    "border-red-500 *:text-red-500 *:placeholder:text-red-500",
                 )}
               >
                 <User
@@ -92,9 +94,9 @@ export const UserForm = () => {
             <FormItem className="flex flex-col space-y-0">
               <div
                 className={cn(
-                  "flex items-center border h-[64px] gap-2 px-2 rounded-lg",
+                  "flex items-center border h-[64px] gap-2 px-4 rounded-xl",
                   form.formState.errors.email &&
-                  "border-red-500 *:text-red-500 *:placeholder:text-red-500",
+                    "border-red-500 *:text-red-500 *:placeholder:text-red-500",
                 )}
               >
                 <Mail
@@ -120,3 +122,4 @@ export const UserForm = () => {
     </Form>
   );
 };
+
