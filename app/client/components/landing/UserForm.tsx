@@ -78,7 +78,7 @@ export const UserForm = () => {
                   <input
                     placeholder="Tu nombre"
                     {...field}
-                    className="text-base h-full text-foreground focus:outline-none"
+                    className="text-base h-full text-foreground focus:outline-none bg-transparent"
                   />
                 </FormControl>
               </div>
@@ -107,7 +107,7 @@ export const UserForm = () => {
                   <input
                     placeholder="Tu email"
                     {...field}
-                    className=" text-base h-full text-foreground focus:outline-none"
+                    className=" text-base h-full text-foreground focus:outline-none bg-transparent"
                   />
                 </FormControl>
               </div>
@@ -122,4 +122,3 @@ export const UserForm = () => {
     </Form>
   );
 };
-
