@@ -33,7 +33,7 @@ export const UserForm = () => {
     try {
       toast("Llevando a cabo el registro...", {
         description: "¡La espera valdrá la pena!",
-        icon: <Loader size={16} />,
+        icon: <Loader size={16} className="animate-spin" />,
       });
 
       await addLeadToMailjetContactList({
