@@ -56,7 +56,7 @@ export default function Landing() {
                 />
               </div>
               <p className=" max-w-sm text-left text-xs font-normal sm:text-sm ">
-                +3000 vendedores de Amazon están esperando el{" "}
+                +3000 vendedores de Amazon están esperando el
                 <br className="hidden sm:inline-block" /> lanzamiento de Tapy.AI
               </p>
             </div>
