@@ -25,6 +25,8 @@ export async function POST(req: Request) {
       },
     );
 
+    console.log(res.body);
+
     return new Response(
       JSON.stringify("Lead added to contact list successfully"),
       { status: 200 },
