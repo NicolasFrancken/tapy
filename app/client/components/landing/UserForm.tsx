@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { User, Mail } from "lucide-react";
+import { User, Mail, Loader } from "lucide-react";
 import { Button } from "../ui/button";
 import { addLeadToMailjetContactList } from "../../libs/landing/addLeadToMailjetContactList";
 import { toast } from "sonner";
@@ -29,26 +29,32 @@ export const UserForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      toast.promise(
-        addLeadToMailjetContactList({ name: values.name, email: values.email }),
-        {
-          icon: "🚀",
-          loading: "Enviando tu información...",
-          success: () => {
-            form.reset();
-            return "Yey, ahora eres parte del mejor software del mundo 🎉";
-          },
-          error: () => {
-            form.reset();
-            return "Oh oh, ocurrió un error. Intentalo de nuevo.";
-          },
-        },
-      );
+      toast("Llevando a cabo el registro...", {
+        description: "¡La espera valdrá la pena!",
+        icon: <Loader size={16} />,
+      });
+
+      await addLeadToMailjetContactList({
+        name: values.name,
+        email: values.email,
+      });
+
+      form.reset();
+
+      toast.success("¡Ya eres parte de TAPY! ", {
+        duration: 10000,
+        description:
+          "Mientras ultimamos los detalles para el lanzamiento, te mantendremos al día con todas las novedades y actualizaciones directamente en tu correo.",
+      });
     } catch (error) {
-      return toast.error(" Oh oh, ocurrió un error");
+      form.reset();
+      return toast.error("¡Ups! Algo no salió como esperábamos. ", {
+        duration: 10000,
+        description:
+          "Estamos solucionando este inconveniente lo más rápido posible. Agradecemos tu paciencia y comprensión. Por favor, intenta nuevamente en unos minutos.",
+      });
     }
   };
 
@@ -122,3 +128,4 @@ export const UserForm = () => {
     </Form>
   );
 };
+

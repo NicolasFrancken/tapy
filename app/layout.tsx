@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { cn } from "./client/libs/utils";
 import { Toaster } from "./client/components/ui/sonner";
+import { CheckCircle2, XCircle } from "lucide-react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -65,8 +66,16 @@ export default function RootLayout({
     <html lang="es">
       <body className={cn("antialiased", outfit.className)}>
         {children}
-        <Toaster position="top-right" />
+        <Toaster
+          icons={{
+            success: <CheckCircle2 size={16} />,
+            error: <XCircle size={16} />,
+          }}
+          visibleToasts={1}
+          position="top-center"
+        />
       </body>
     </html>
   );
 }
+
